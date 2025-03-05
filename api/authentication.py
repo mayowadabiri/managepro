@@ -1,4 +1,4 @@
-from rest_framework.authentication import TokenAuthe6ntication as BaseAuthToken
+from rest_framework.authentication import TokenAuthentication as BaseAuthToken
 
 
 class TokenAuthentication(BaseAuthToken):
