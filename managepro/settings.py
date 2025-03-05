@@ -149,6 +149,6 @@ DATABASES = {
 REST_FRAMEWORK = {
 
     "DEFAULT_PERMISSION_CLASSES": (
-        "rest_framework.permissions.AllowAny",  # Default: Allow anyone to access views
+        "rest_framework.permissions.IsAuthenticated",
     ),
 }
