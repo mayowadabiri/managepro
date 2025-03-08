@@ -13,6 +13,5 @@ from .models import Service
 class ServiceViewset(ModelViewSet):
     serializer_class = ServiceSerializer
     permission_classes = [IsAuthenticated]
-    authentication_classes = [TokenAuthentication]
     queryset = Service.objects.all()
     lookup_field = "pk"
