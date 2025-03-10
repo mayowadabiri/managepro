@@ -2,15 +2,15 @@ from enum import Enum
 
 
 class Cycle(Enum):
-    DAILY = "daily"
+    WEEKLY = "weekly"
     MONTHLY = "monthly"
     YEARLY = "yearly"
 
 
 class Status(Enum):
-    ACTIVE = 'active',
-    TOEXPIRE = 'to_expire',
-    EXPIRED = 'expired',
+    ACTIVE = 'active'
+    TOEXPIRE = 'to_expire'
+    EXPIRED = 'expired'
 
 
 class Currency(Enum):
