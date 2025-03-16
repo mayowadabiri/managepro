@@ -2,7 +2,6 @@ from enum import Enum
 
 
 class Cycle(Enum):
-    WEEKLY = "weekly"
     MONTHLY = "monthly"
     YEARLY = "yearly"
 

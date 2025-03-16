@@ -9,7 +9,7 @@ from django_filters import rest_framework as filters
 from django_filters.rest_framework import DjangoFilterBackend
 
 
-from subscription.schema import Status
+from subscription.schema import Status, Cycle
 
 
 class SubscriptionFilter(filters.FilterSet):
@@ -20,6 +20,8 @@ class SubscriptionFilter(filters.FilterSet):
     amount_lte = filters.NumberFilter(field_name="amount", lookup_expr='lte')
     status = filters.ChoiceFilter(
         choices=[(choice.value, choice.name) for choice in Status])
+    cycle = filters.ChoiceFilter(
+        choices=[(cycle.value, cycle.name) for cycle in Cycle])
 
     class Meta:
         model = Subscription
