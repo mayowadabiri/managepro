@@ -176,8 +176,12 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 
 CELERY_BEAT_SCHEDULE = {
-    "sample_task": {
-        "task": "subscription.tasks.update_free_trial_details",
+    # "sample_task": {
+    #     "task": "subscription.tasks.update_free_trial_details",
+    #     "schedule": schedule(10.0),
+    # },
+    "send_one_week_notification": {
+        "task": "subscription.tasks.send_one_week_notification",
         "schedule": schedule(10.0),
     }
 }
